@@ -3,28 +3,28 @@
     <v-container id="home" class="mt-16">
       <v-row class="mt-16 pt-lg-12" justify="center">
         <v-col cols="12" lg="9" xl="6" xxl="4" class="align-center layout-heading">
-          <v-flex class="d-flex d-sm-none mt-n6" align="center">
+          <div class="d-flex d-sm-none mt-n6 justify-center">
             <v-img class="ma-5 avatar-grid-animated" aspect-ratio="1/1" max-height="300px" src="../assets/images/avatar.png" cover oncontextmenu="return false" />
-          </v-flex>
-          <v-flex class="d-flex flex-column title-heading">
+          </div>
+          <div class="d-flex flex-column title-heading">
             <h2 class="mx-4 desktop-h2">Full Stack Developer</h2>
             <h1 class="font-weight-bold mx-4 desktop-h1" style="line-height: 1.2">Rory Rinaldo</h1>
 
             <p class="ma-4">
-              Hi there, i'm a
+              Hi there, I'm a
               <span class="font-weight-bold" style="color: rgba(142, 5, 194, 1)">Full Stack Developer</span> based in Indonesia who specializes in <i>Web</i> and <i>Mobile Development</i>
             </p>
-          </v-flex>
+          </div>
 
-          <v-flex class="d-none d-sm-flex">
+          <div class="d-none d-sm-flex">
             <v-img class="avatar-grid avatar-grid-animated" aspect-ratio="1/1" max-height="400px" src="../assets/images/avatar.png" cover oncontextmenu="return false" />
-          </v-flex>
+          </div>
         </v-col>
       </v-row>
 
       <v-row justify="center" class="my-4">
         <v-col v-for="social in socialMedia" :key="social.id" cols="2" md="1" class="text-center">
-          <a :href="social.link" target="_blank">
+          <a :href="social.link" target="_blank" rel="noopener noreferrer" :aria-label="social.name">
             <v-icon :icon="social.icon" size="x-large" class="social-icon"></v-icon>
           </a>
         </v-col>
@@ -33,61 +33,54 @@
   </div>
 
   <v-container id="about" class="mt-5">
-    <v-layout class="d-flex flex-column pt-15" wrap>
-      <v-flex class="text-center" xs12 sm6>
+    <div class="d-flex flex-column pt-15">
+      <div class="text-center">
         <h2 class="h2">ABOUT</h2>
         <p class="h3">to know more about me</p>
-      </v-flex>
-      <v-flex class="mt-5" xs12 sm6>
+      </div>
+      <div class="mt-5">
         <v-row>
           <v-col cols="12" md="4" class="mt-5" align="center">
             <v-img class="avatar-size" aspect-ratio="1/1" src="../assets/images/picture.png" style="background-color: #000000" oncontextmenu="return false" />
           </v-col>
           <v-col cols="12" md="8" class="text-justify">
             <v-list lines="two">
-              <v-list-item-group>
-                <v-list-item prepend-icon="mdi-code-tags">
-                  <v-list-item-content>
-                    My name is Rory Rinaldo. I'm a Full-Stack Developer based in Indonesia with 2 years of freelancing experience. Stay up-to-date with the latest technologies and trends. Passionate about creating beautiful and functional
-                    web and mobile applications.
-                  </v-list-item-content>
-                </v-list-item>
+              <v-list-item prepend-icon="mdi-code-tags">
+                <p class="mb-0">
+                  My name is Rory Rinaldo. I'm a Full-Stack Developer based in Indonesia with 2 years of freelancing experience. Stay up-to-date with the latest technologies and trends. Passionate about creating beautiful and functional web
+                  and mobile applications.
+                </p>
+              </v-list-item>
 
-                <v-list-item prepend-icon="mdi-brush">
-                  <v-list-item-content>
-                    Proficient in UI/UX design using Figma; specializes in blending style with seamless user experiences; can create applications with modern, attractive appearances tailored to specific business needs.
-                  </v-list-item-content>
-                </v-list-item>
+              <v-list-item prepend-icon="mdi-brush">
+                <p class="mb-0">Proficient in UI/UX design using Figma; specializes in blending style with seamless user experiences; can create applications with modern, attractive appearances tailored to specific business needs.</p>
+              </v-list-item>
 
-                <v-list-item prepend-icon="mdi-school">
-                  <v-list-item-content> Graduated with a Bachelor of Applied Computer in Information Systems from Vocational College of Politeknik Caltex Riau. </v-list-item-content>
-                </v-list-item>
+              <v-list-item prepend-icon="mdi-school">
+                <p class="mb-0">Graduated with a Bachelor of Applied Computer in Information Systems from Vocational College of Politeknik Caltex Riau.</p>
+              </v-list-item>
 
-                <v-list-item prepend-icon="mdi-account-group">
-                  <v-list-item-content>
-                    Experienced in leadership roles within organizations; capable of leading and coordinating effectively. Skilled in both team collaboration and individual work, demonstrating adaptability and flexibility in various work
-                    environments.
-                  </v-list-item-content>
-                </v-list-item>
+              <v-list-item prepend-icon="mdi-account-group">
+                <p class="mb-0">Experienced in leadership roles within organizations; capable of leading and coordinating effectively. Skilled in both team collaboration and individual work, demonstrating adaptability and flexibility.</p>
+              </v-list-item>
 
-                <v-list-item prepend-icon="mdi-gamepad-variant">
-                  <v-list-item-content> Outside of work, I'm an avid gamer and enjoy embarking on mountain adventures, exploring the natural beauty and challenges they offer. </v-list-item-content>
-                </v-list-item>
-              </v-list-item-group>
+              <v-list-item prepend-icon="mdi-gamepad-variant">
+                <p class="mb-0">Outside of work, I'm an avid gamer and enjoy mountain adventures, exploring the natural beauty and challenges they offer.</p>
+              </v-list-item>
             </v-list>
           </v-col>
         </v-row>
-      </v-flex>
-    </v-layout>
+      </div>
+    </div>
   </v-container>
 
   <v-container id="skill" class="mt-5">
-    <v-layout class="d-flex flex-column pt-15">
-      <v-flex class="text-center">
+    <div class="d-flex flex-column pt-15">
+      <div class="text-center">
         <h2 class="h2">SKILLS & TECHNOLOGIES</h2>
         <p class="h3">explore my expertise</p>
-      </v-flex>
-      <v-flex class="mt-10">
+      </div>
+      <div class="mt-10">
         <v-row v-for="(category, index) in categories" :key="index">
           <v-col cols="12" md="2" :class="'bg-' + category.color">
             <p class="ma-4 font-weight-bold">{{ category.title }}</p>
@@ -102,17 +95,17 @@
             </v-row>
           </v-col>
         </v-row>
-      </v-flex>
-    </v-layout>
+      </div>
+    </div>
   </v-container>
 
   <v-container id="project" class="mt-5">
-    <v-layout class="d-flex flex-column pt-15">
-      <v-flex class="text-center" xs12 sm6>
+    <div class="d-flex flex-column pt-15">
+      <div class="text-center">
         <h2 class="h2">PROJECTS</h2>
-        <p class="h3">my selected project</p>
-      </v-flex>
-      <v-flex class="mt-10" xs12 sm6 align="center">
+        <p class="h3">my selected projects</p>
+      </div>
+      <div class="mt-10 text-center">
         <v-row class="px-1">
           <v-col v-for="project in displayedProjects" :key="project.id" cols="12" class="mb-5">
             <v-card class="rounded-xl" theme="dark" align="left">
@@ -121,7 +114,7 @@
                   <v-img :src="project.imageUrl" class="rounded-xl bg-black"> </v-img>
                 </v-col>
                 <v-col cols="12" md="5" align-self="center">
-                  <v-flex class="d-flex flex-column">
+                  <div class="d-flex flex-column">
                     <v-card-title>{{ project.name }}</v-card-title>
                     <v-card-subtitle>{{ project.category }}</v-card-subtitle>
                     <v-card-text>
@@ -130,15 +123,15 @@
                     <v-card-text>
                       Technologies:
                       <v-chip-group v-model="selection">
-                        <v-chip size="small" v-for="technology in project.technologies" :key="technology">{{ technology.tech }}</v-chip>
+                        <v-chip size="small" v-for="technology in project.technologies" :key="technology.id">{{ technology.tech }}</v-chip>
                       </v-chip-group>
                     </v-card-text>
                     <v-card-actions>
-                      <v-btn v-if="project.githubUrl" prepend-icon="mdi-github" :href="project.githubUrl" target="_blank">Source Code</v-btn>
+                      <v-btn v-if="project.githubUrl" prepend-icon="mdi-github" :href="project.githubUrl" target="_blank" rel="noopener noreferrer">Source Code</v-btn>
 
-                      <v-btn v-if="project.liveDemoUrl" prepend-icon="mdi-web" :href="project.liveDemoUrl" target="_blank">Live Demo</v-btn>
+                      <v-btn v-if="project.liveDemoUrl" prepend-icon="mdi-web" :href="project.liveDemoUrl" target="_blank" rel="noopener noreferrer">Live Demo</v-btn>
                     </v-card-actions>
-                  </v-flex>
+                  </div>
                 </v-col>
               </v-row>
             </v-card>
@@ -146,21 +139,20 @@
         </v-row>
 
         <v-btn class="ma-10 bg-black" @click="showMore" v-if="displayedProjects.length < projects.length" text="Show More"></v-btn>
-      </v-flex>
-    </v-layout>
+      </div>
+    </div>
   </v-container>
 
   <v-container id="contact" class="mt-5">
-    <v-layout class="d-flex flex-column pt-15">
-      <v-flex class="text-center" xs12 sm6>
+    <div class="d-flex flex-column pt-15">
+      <div class="text-center">
         <h2 class="h2">CONTACT</h2>
         <p class="h3">get in touch</p>
-      </v-flex>
-      <v-flex class="ma-10" align="center">
+      </div>
+      <div class="ma-10 text-center">
         <v-btn class="button-email" size="x-large" prepend-icon="mdi-email" text="Contact Me" href="mailto:roryrinaldo06@gmail.com" color="black"></v-btn>
-        <v-breadcrumbs style="margin-top: 200px" />
-      </v-flex>
-    </v-layout>
+      </div>
+    </div>
   </v-container>
 </template>
 
@@ -225,24 +217,28 @@ export default {
         {
           id: 1,
           icon: 'mdi-instagram',
+          name: 'Instagram',
 
           link: 'https://www.instagram.com/rynaldo.dev',
         },
         {
           id: 2,
           icon: 'mdi-twitter',
+          name: 'Twitter',
 
           link: 'https://twitter.com/rory_rinaldo',
         },
         {
           id: 3,
           icon: 'mdi-linkedin',
+          name: 'LinkedIn',
 
           link: 'https://www.linkedin.com/in/roryrinaldo',
         },
         {
           id: 4,
           icon: 'mdi-github',
+          name: 'GitHub',
 
           link: 'https://github.com/roryrinaldo',
         },
@@ -254,7 +250,7 @@ export default {
           name: 'Project 1',
           category: 'Web Development',
           technologies: [
-            { id: 1, tech: 'Vue.Js' },
+            { id: 1, tech: 'Vue.js' },
             { id: 2, tech: 'Laravel' },
           ],
           description: 'This is a web development project that I worked on. I used Vue.js and Laravel to build a website for a local business.',
@@ -266,6 +262,10 @@ export default {
           imageUrl: require('../assets/projects/project-2.jpg'),
           name: 'Project 2',
           category: 'App Development',
+          technologies: [
+            { id: 1, tech: 'React Native' },
+            { id: 2, tech: 'API Integration' },
+          ],
           description: 'This is a mobile development project that I worked on. I used React Native to build an app for a food delivery service.',
           githubUrl: 'https://github.com/roryrinaldo',
         },
@@ -274,6 +274,10 @@ export default {
           imageUrl: require('../assets/projects/project-3.jpg'),
           name: 'Project 3',
           category: 'App Development',
+          technologies: [
+            { id: 1, tech: 'Python' },
+            { id: 2, tech: 'Machine Learning' },
+          ],
           description: 'This is a data science project that I worked on. I used Python and machine learning to build a model that predicts customer churn.',
           githubUrl: 'https://github.com/roryrinaldo',
           liveDemoUrl: 'https://github.com/roryrinaldo',
@@ -283,7 +287,11 @@ export default {
           imageUrl: require('../assets/projects/project-4.jpg'),
           name: 'Project 4',
           category: 'App Development',
-          description: 'asdasd',
+          technologies: [
+            { id: 1, tech: 'Laravel' },
+            { id: 2, tech: 'MySQL' },
+          ],
+          description: 'This is an application development project focused on delivering a responsive interface, structured data management, and practical business workflows.',
           githubUrl: 'https://github.com/roryrinaldo',
           liveDemoUrl: 'https://github.com/roryrinaldo',
         },
@@ -292,12 +300,17 @@ export default {
           imageUrl: require('../assets/projects/project-5.jpg'),
           name: 'Project 5',
           category: 'App Development',
-          description: 'This is a data science project that I worked on. I used Python and machine learning to build a model that predicts customer churn.',
+          technologies: [
+            { id: 1, tech: 'Vue.js' },
+            { id: 2, tech: 'Firebase' },
+          ],
+          description: 'This is a web application project focused on real-time data, responsive interfaces, and practical user workflows.',
           githubUrl: 'https://github.com/roryrinaldo',
           liveDemoUrl: 'https://github.com/roryrinaldo',
         },
       ],
       displayedProjects: [],
+      selection: null,
     };
   },
   mounted() {
@@ -319,7 +332,8 @@ export default {
     font-size: 30px;
   }
   .avatar-size {
-    width: 400px;
+    width: 100%;
+    max-width: 320px;
   }
   .h-heading {
     height: auto;
@@ -340,7 +354,8 @@ export default {
   }
 
   .avatar-size {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
   }
 
   .layout-heading {
